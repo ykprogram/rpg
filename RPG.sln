@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG", "RPG.vcxproj", "{9420F122-F939-4FA3-8EB4-7F45FC1D536D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9420F122-F939-4FA3-8EB4-7F45FC1D536D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9420F122-F939-4FA3-8EB4-7F45FC1D536D}.Debug|Win32.Build.0 = Debug|Win32
+		{9420F122-F939-4FA3-8EB4-7F45FC1D536D}.Release|Win32.ActiveCfg = Release|Win32
+		{9420F122-F939-4FA3-8EB4-7F45FC1D536D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

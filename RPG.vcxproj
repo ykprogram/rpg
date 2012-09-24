@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Program Files\Battle Phase\Battle.cpp" />
+    <ClCompile Include="Program Files\Battle Phase\BattleMgr.cpp" />
+    <ClCompile Include="Program Files\Battle Phase\Battle_Player.cpp" />
+    <ClCompile Include="Program Files\BeforeBattle\BeforeBattleMgr.cpp" />
+    <ClCompile Include="Program Files\BeforeBattle\Before_Battle.cpp" />
+    <ClCompile Include="Program Files\Function.cpp" />
+    <ClCompile Include="Program Files\KeyBoard.cpp" />
+    <ClCompile Include="Program Files\Main.cpp" />
+    <ClCompile Include="Program Files\Map\Map.cpp" />
+    <ClCompile Include="Program Files\Map\MapMenu.cpp" />
+    <ClCompile Include="Program Files\Map\MapMgr.cpp" />
+    <ClCompile Include="Program Files\Map\Map_Player.cpp" />
+    <ClCompile Include="Program Files\Mouse.cpp" />
+    <ClCompile Include="Program Files\Music\Music.cpp" />
+    <ClCompile Include="Program Files\Start Menu\Start Menu.cpp" />
+    <ClCompile Include="Program Files\Story\StoryMgr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Program Files\readme.txt" />
+    <None Include="Program Files\RPGバージョンのログ.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Program Files\Battle Phase\Battle.h" />
+    <ClInclude Include="Program Files\Battle Phase\BattleMgr.h" />
+    <ClInclude Include="Program Files\Battle Phase\Battle_Player.h" />
+    <ClInclude Include="Program Files\BeforeBattle\BeforeBattleMgr.h" />
+    <ClInclude Include="Program Files\BeforeBattle\Before_Battle.h" />
+    <ClInclude Include="Program Files\Define.h" />
+    <ClInclude Include="Program Files\Function.h" />
+    <ClInclude Include="Program Files\KeyBoard.h" />
+    <ClInclude Include="Program Files\Map\Map.h" />
+    <ClInclude Include="Program Files\Map\MapMenu.h" />
+    <ClInclude Include="Program Files\Map\MapMgr.h" />
+    <ClInclude Include="Program Files\Map\Map_Player.h" />
+    <ClInclude Include="Program Files\Mouse.h" />
+    <ClInclude Include="Program Files\Music\Music.h" />
+    <ClInclude Include="Program Files\Start Menu\Start Menu.h" />
+    <ClInclude Include="Program Files\Story\StoryMgr.h" />
+    <ClInclude Include="Program Files\UsePrototype.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9420F122-F939-4FA3-8EB4-7F45FC1D536D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RPG</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\YUTA\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\YUTA\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\YUTA\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\YUTA\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
