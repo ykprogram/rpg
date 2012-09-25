@@ -25,8 +25,7 @@ int StartMenu(){
 	DrawFormatString( 320, 240, GetColor( 255, 255, 255 ), "ver3.00");
 	switch( DrawMenu( 5, 1, KEY_INPUT_Z, MenuElement ) ){
 	case 0:return 2;	// ゲームスタート
-	case 4:return 1000; // ゲーム終了
+	case 4:return 5; // ゲーム終了
 	}
 	return 1;
-
 }

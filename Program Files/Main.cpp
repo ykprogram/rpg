@@ -24,7 +24,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine
 {
 	Mouse_t Mouse;				// マウスの実体宣言
 	Map_Player_t Player;		// プレイヤーの実体宣言
-	Character_t Character[2];		// キャラクターのステータスの実態宣言
+	Character_t Character;		// キャラクターのステータスの実態宣言
 
 	SetGraphMode( ScreenWidth, ScreenHeight, 32 ) ;
 	ChangeWindowMode(TRUE), DxLib_Init(), SetDrawScreen( DX_SCREEN_BACK ); // ウィンドウモード変更と初期化と裏画面設定
@@ -44,7 +44,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine
 	
 	
 	// while( 裏画面を表画面に反映, メッセージ処理, 画面クリア, エスケープ押したら脱出, Phaseに1000が入ると脱出)
-	while( ScreenFlip()==0 && ProcessMessage()==0 && ClearDrawScreen()==0 && CheckHitKey( KEY_INPUT_ESCAPE )==0 && Phase!=1000){
+	while( ScreenFlip()==0 && ProcessMessage()==0 && ClearDrawScreen()==0 && CheckHitKey( KEY_INPUT_ESCAPE )==0){
 		AllKey();									// これでCheckHitKey2が使えるようになるよ	
 		switch(Phase){
 		case 0:Phase=StoryMgr();break;				// メニューなんだけどPhaseに代入してるのは返り値
@@ -53,6 +53,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine
 		case 3:Phase=BeforeBattleMgr( &Enemy );break;
 		case 4:Phase=Battle( &Character, Enemy );break;
 		}
+		if(Phase==5)return 0;
 		Mouse_Draw( &Mouse );// ここでマウスのポインターを取得し描画する
 	}
 	DxLib_End(); // DXライブラリ終了処理				

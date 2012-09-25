@@ -5,6 +5,7 @@
 	#ifdef BATTLE_PLAYER_PROTOTYPE
 
 	#include "Battle.h"
+
 	void Battle_Player_Ini( Character_t *Character );
 
 	#endif // BATTLE_PLAYER_PROTOTYPE END
